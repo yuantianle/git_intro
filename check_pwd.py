@@ -11,7 +11,7 @@ def check_pwd(num):
 
     flag_digit = False
     for i in num:
-        if (i in string.digits):
+        if i in string.digits:
             flag_digit = True
             break
     if flag_digit == False:
@@ -19,10 +19,18 @@ def check_pwd(num):
 
     flag_symbol = False
     for i in num:
-        if (i in '~`!@#$%^&*()_+-='):
+        if i in '~`!@#$%^&*()_+-=':
             flag_symbol = True
             break
     if flag_symbol == False:
+        return False
+
+    flag_latter = False
+    for i in num:
+        if i in string.ascii_lowercase + string.ascii_uppercase:
+            flag_latter = True
+            break
+    if flag_latter == False:
         return False
 
     return True
