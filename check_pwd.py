@@ -4,4 +4,6 @@ def check_pwd(num):
         return False
     if num.isupper():
         return False
+    if num.islower():
+        return False
     return True
