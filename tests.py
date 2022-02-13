@@ -10,6 +10,11 @@ class Test(TestCase):
         expection = False
         self.assertEqual(check_pwd(input), expection)
 
+    def test_2(self):
+        input = "D234567*"
+        expection = False
+        self.assertEqual(check_pwd(input), expection)
+
 
 # *********************************************************************
 if __name__ == '__main__':
