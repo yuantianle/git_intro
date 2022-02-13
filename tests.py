@@ -30,6 +30,11 @@ class Test(TestCase):
         expection = False
         self.assertEqual(check_pwd(input), expection)
 
+    def test_6(self):
+        input = "4~5d&6dwWD)+@6D'5"
+        expection = True
+        self.assertEqual(check_pwd(input), expection)
+
 
 # *********************************************************************
 if __name__ == '__main__':
