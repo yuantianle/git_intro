@@ -20,6 +20,12 @@ class Test(TestCase):
         expection = False
         self.assertEqual(check_pwd(input), expection)
 
+    def test_4(self):
+        input = "dDddddd*"
+        expection = False
+        self.assertEqual(check_pwd(input), expection)
+
+
 # *********************************************************************
 if __name__ == '__main__':
     unittest.main(verbosity=2)
