@@ -16,4 +16,13 @@ def check_pwd(num):
             break
     if flag_digit == False:
         return False
+
+    flag_symbol = False
+    for i in num:
+        if (i in '~`!@#$%^&*()_+-='):
+            flag_symbol = True
+            break
+    if flag_symbol == False:
+        return False
+
     return True
